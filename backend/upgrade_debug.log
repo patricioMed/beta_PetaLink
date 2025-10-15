@@ -1,0 +1,14 @@
+2025-10-05T07:01:54+02:00 RAW: {"name":"Ghervie Medrano","contact_number":"09999999123","email":"patrickOwner101_beta@gmail.com","password":"password_patrickOwner#101_beta","role":"owner","address":"162 Ildefonso St, Brgy. Capaoay, San Jacinto, Pangasinan","shop_name":"upgraded101"}
+2025-10-05T07:01:54+02:00 PARSED: Array
+(
+    [name] => Ghervie Medrano
+    [contact_number] => 09999999123
+    [email] => patrickOwner101_beta@gmail.com
+    [password] => password_patrickOwner#101_beta
+    [role] => owner
+    [address] => 162 Ildefonso St, Brgy. Capaoay, San Jacinto, Pangasinan
+    [shop_name] => upgraded101
+)
+
+2025-10-05T07:01:54+02:00 INSERTED user_id=324 shop_name='upgraded101'
+2025-10-05T07:01:54+02:00 flowershopowners already existed owner_id=264

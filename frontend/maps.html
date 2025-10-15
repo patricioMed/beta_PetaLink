@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flower Shop Location - San Jacinto, Pangasinan</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h3 {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Our Flower Shop San Jacinto, Pangasinan</h3>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        const location = { lat: 16.073113, lng: 120.438295 }; // Approximate coordinates
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 17,
+          center: location,
+        });
+
+        const marker = new google.maps.Marker({
+          position: location,
+          map: map,
+          title: "139 Ildefonso Street, Brgy. Capaoay, San Jacinto",
+        });
+
+        const infoWindow = new google.maps.InfoWindow({
+          content: `
+            <strong>Our Flower Shop</strong><br>
+            139 Ildefonso Street<br>
+            Brgy. Capaoay, San Jacinto, Pangasinan
+          `,
+        });
+
+        marker.addListener("click", () => {
+          infoWindow.open(map, marker);
+        });
+      }
+    </script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTq5W8yIVSOkYBsEVE1QBweMx7kDhFOd0&callback=initMap"
+    ></script>
+  </body>
+</html>

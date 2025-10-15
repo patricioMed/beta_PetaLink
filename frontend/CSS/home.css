@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #1a0026;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #11001a;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #660066;
+  z-index: 1000;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 50px;
+  border-radius: 8px;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.logo-text span:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a81ea8ff;
+}
+.tagline {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+/* add */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icons a,
+.icons i {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+.icons a:hover,
+.icons i:hover {
+  color: white;
+}
+
+/* Search */
+.search-bar {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  background: #11001a;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1;
+  max-width: 300px;
+  margin-top: 10px;
+}
+.search-bar input {
+  flex: 1;
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  background: white;
+  color: black;
+  font-size: 0.9rem;
+}
+.search-bar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border: none;
+  background: #660066;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-bar button:hover {
+  background: #a81ea8ff;
+}
+
+/* Banner */
+.picFlower {
+  background-image: url("../Images/finalLogo_real.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  margin-top: 90px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.picFlower::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.picOverlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.picOverlay h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.picOverlay p {
+  font-size: 1rem;
+}
+
+/* Main */
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Buttons */
+.all-shops-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #1a0026;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid #660066;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.all-shops-btn:hover {
+  background: #660066;
+  border-color: #ff66cc;
+}
+
+/* Grid cards */
+.shop-list,
+.flower-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.shop-card,
+.flower-card {
+  background: #2a0038;
+  border: 1px solid #660066;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.shop-card:hover,
+.flower-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.shop-card a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 8px;
+}
+.shop-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.flower-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.flower-card h3 {
+  font-size: 1rem;
+  color: #ff66cc;
+  margin-bottom: 5px;
+}
+.flower-card p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Sections */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Recent Orders Scroll */
+.recent-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #660066 #1a0026;
+}
+.recent-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.recent-scroll::-webkit-scrollbar-track {
+  background: #1a0026;
+}
+.recent-scroll::-webkit-scrollbar-thumb {
+  background: #660066;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .picFlower {
+    height: 250px;
+    margin-top: 120px;
+  }
+  main {
+    margin: 20px;
+    padding: 15px;
+  }
+  .shop-list,
+  .flower-list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .picFlower {
+    height: 200px;
+    margin-top: 140px;
+  }
+  .picOverlay h1 {
+    font-size: 1.5rem;
+  }
+  .picOverlay p {
+    font-size: 0.85rem;
+  }
+  .shop-card a,
+  .flower-card h3 {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 480px) {
+  .picFlower {
+    height: 180px;
+    margin-top: 130px;
+  }
+  header {
+    padding: 10px 15px;
+  }
+  .logo img {
+    height: 45px;
+  }
+  .picOverlay h1 {
+    font-size: 1.2rem;
+  }
+  .picOverlay p {
+    font-size: 0.75rem;
+  }
+  .shop-card a,
+  .flower-card h3 {
+    font-size: 0.85rem;
+  }
+  main {
+    margin: 15px;
+    padding: 10px;
+  }
+}
